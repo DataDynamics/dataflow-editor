@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+    .btn {
+        border: none; /* Remove borders */
+        color: white; /* Add a text color */
+        padding: 10px 20px; /* Add some padding */
+        cursor: pointer; /* Add a pointer cursor on mouse-over */
+        background-color: #e7e7e7; color: black;
+        background: #ddd;
+        margin-left:2px;
+    }
+    .btn-i {
+        border: none; /* Remove borders */
+        color: white; /* Add a text color */
+        /*padding: 14px 28px;*/ /* Add some padding */
+        cursor: pointer; /* Add a pointer cursor on mouse-over */
+        background-color: #e1eef6; color: black;
+        background: #e1eef6;
+        /*margin-left:5px;*/
+        width:32px;
+        height:32px;  
+        margin:2px;  
+        background-size:32px 32px;width:32px;height:32px;
+    }
+    .btn-i:hover{
+        background-color: #ff5f2e; 
+    }
+    .btn-s{
+        border: none; /* Remove borders */
+        color: white; /* Add a text color */
+        padding: 5px 10px; /* Add some padding */
+        cursor: pointer; /* Add a pointer cursor on mouse-over */
+        background-color: #e7e7e7; color: black;
+        background: #ddd;
+        margin-left:2px;
+        margin-top:5px;
+    }   
+    .noneselect {
+        -webkit-user-select: none; /* Safari 3.1+ */
+        -moz-user-select: none; /* Firefox 2+ */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+    } 
+    </style>
+  </head>
+<body>
+    <h3><img src="./img/logo.png" height="14"> Flow Diagram. &nbsp;&nbsp;&nbsp;&nbsp;<small><small>Flow Diagram을 위한 API가 지원됩니다.디자인은 각자 설정할 수 있습니다.</small></small></h3>
+    <hr>
+    <div class="noneselect">
+        <img class="noneselect" src="./img/table-32px.png" height="26" ondragstart="drag(event, 'table')" draggable="true"/>
+        <!--
+        <img src="./img/table-32px.png" ondragstart="drag(event, 'join', 'inner')" draggable="true">
+        <img src="./img/table-32px.png" ondragstart="drag(event, 'join', 'inner')" draggable="true">
+        -->
+        <img class="noneselect" src="./img/join-inner-32px.png" height="26" ondragstart="drag(event, 'join', 'inner')" draggable="true">
+        <img class="noneselect" src="./img/join-left-32px.png" height="26" ondragstart="drag(event, 'join', 'left')" draggable="true">
+        <img class="noneselect" src="./img/join-right-32px.png" height="26" ondragstart="drag(event, 'join', 'right')" draggable="true">
+        <img class="noneselect" src="./img/join-full-32px.png" height="26" ondragstart="drag(event, 'join', 'full')" draggable="true">
+        <img class="noneselect" src="./img/sort-32px.png" height="26" ondragstart="drag(event, 'sort')" draggable="true">
+        <img class="noneselect" src="./img/filter-32px.png" height="26" ondragstart="drag(event, 'filter')" draggable="true">
+        <img class="noneselect" src="./img/function-32px.png" height="26" ondragstart="drag(event, 'function')" draggable="true">
+        <img class="noneselect" src="./img/file-32px.png" height="26" ondragstart="drag(event, 'file')" draggable="true">
+        <img class="noneselect" src="./img/group-32px.png" height="26" ondragstart="drag(event, 'group')" draggable="true">
+        <img class="noneselect" src="./img/merge-32px.png" height="26" ondragstart="drag(event, 'merge')" draggable="true">
+        <img class="noneselect" src="./img/union-32px.png" height="26" ondragstart="drag(event, 'union')" draggable="true">
+        <img class="noneselect" src="./img/pivot-32px.png" height="26" ondragstart="drag(event, 'pivot')" draggable="true">
+        &nbsp;<span style="font-size:12px;color:red;">툴바 사용자 정의(Drag & Drop 확장 가능)</span>
+        <!--
+        <img src="./img/csv-32px.png" height="26" ondragstart="drag(event, 'csv')" draggable="true">
+        <img src="./img/data-profile-32px.png" height="26" ondragstart="drag(event, 'data-profile')" draggable="true">
+        <img src="./img/data-wrangler-32px.png" height="26" ondragstart="drag(event, 'data-wrangler')" draggable="true">
+        <img src="./img/linear-regression-32px.png" height="26" ondragstart="drag(event, 'linear-regression')" draggable="true">
+        <img src="./img/pearson-correlation-32px.png" height="26" ondragstart="drag(event, 'pearson-correlation')" draggable="true">
+        <img src="./img/workflow-32px.png" height="26" ondragstart="drag(event, 'workflow')" draggable="true">
+        <img src="./img/workflow-file-32px.png" height="26" ondragstart="drag(event, 'workflow-file')" draggable="true">
+        
+        <ul style="float:left;width:200px;">
+            <li ondragstart="drag(event, 'flowline')" draggable="true">연결선</li>
+        </ul>
+                <ul style="float:left;width:200px;">
+            <li ondragstart="drag(event, 'table')" draggable="true">테이블1</li>
+            <li ondragstart="drag(event, 'table')" draggable="true">테이블2</li>
+            <li ondragstart="drag(event, 'table')" draggable="true">테이블3</li>
+        </ul>
+        <ul style="float:left;width:200px;">
+        
+        </ul>
+        <ul style="float:left;width:200px;">
+            <li ondragstart="drag(event, 'filter')" draggable="true">필터</li>
+        </ul>
+        <ul style="float:left;width:200px;">
+            <li ondragstart="drag(event, 'sorter')" draggable="true">소터</li>
+        </ul>
+        -->
+
+        
+    </div>
+    <div oncontextmenu='return false' ref="svgArea" 
+        ondrop="drop(event)" ondragover="allowDrop(event)"
+        style="visibility:visible;width:100%;height:450px;border:1px solid gray;background-color:#eee;overflow:auto;-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;">
+        
+    </div>
+    <a href="https://www.starteasy.io" target="_new"><img src="./img/logo_text.png" height="14" style="float:right;margin-top:2px;"></a>
+    <br>
+    <br>
+    <div style="font-size:12px">무료로 사용하실 경우 위 링크가 보일 수 있도록 다이어그램 주변에 추가 해주시기 바랍니다.</div>
+    <br>
+    <div>
+        <button class="btn-s" id="btnDeleteAll">페이지 삭제</button>
+        <button class="btn-s" id="btnCreatePage">빈 페이지 추가</button>
+        <button class="btn-s" id="btnCreateTable">테이블 생성</button>
+        <button class="btn-s" id="btnCreateJoin">JOIN 생성</button>
+        <button class="btn-s" id="btnCreateFilter">필터 생성</button>
+        <button class="btn-s" id="btnCreateSort">소터 생성</button>
+        <button class="btn-s" id="btnCreateFlowline">연결선 생성</button>
+        <button class="btn-s" id="btnVerify">검증</button>
+        <button class="btn-s" id="btnSetData">개별 데이터 설정</button>
+        <button class="btn-s" id="btnHideBtn">버튼 숨기기</button>
+        <button class="btn-s" id="btnShowBtn">버튼 보이기</button>
+        <button class="btn-s" id="btnChangeBtnImg">버튼 이미지 변경</button>
+        <button class="btn-s" id="btnGetData">개별 데이터 가져오기</button>
+        <button class="btn-s" id="btnGetDataAll">전체 데이터 가져오기</button>
+        <button class="btn-s" id="btnSaveData">다이어그램 저장</button>
+        <button class="btn-s" id="btnLoadData">다이어그램 불러오기</button>
+        <button class="btn-s" id="btnDelete">삭제</button>
+        <button class="btn-s" id="btnPrevNode">이전 노드 찾기</button>
+        <button class="btn-s" id="btnNextNode">이후 노드 찾기</button>
+        <button class="btn-s" id="btnSelectNode">노드 선택</button>
+    </div>
+    <br>
+    <div>
+        <textarea id="dataView" style="width:100%;height:150px;">
+        </textarea>
+    </div>
+    <br>
+    <script language="javascript" src="../../sed/js/se/lib_flowline.js?_dc=20181209"></script>  <!-- 라이브러리 경로는 맞추어 주어야 한다. -->
+    <script language="javascript" src="../../sed/js/se/lib.js?_dc=20181209"></script>  <!-- 라이브러리 경로는 맞추어 주어야 한다. -->
+    <script language="javascript" src="../../sed/js/se/lib_text.js?_dc=20181209"></script>    
+    <script language="javascript" src="../../sed/js/se/fg.js?_dc=20181209"></script>
+    <script language="javascript" src="../../sed/js/se/fg_shapes.js?_dc=20181209"></script>
+    <script language="javascript" src="../../sed/js/se/sed.js?_dc=20181209"></script>
+    <script language="javascript" src="../../sed/js/se/lib_ex.js?_dc=20181209"></script>
+    <script language="javascript" src="./flowdiagram.js?_dc=20181209"></script>
+    <script language="javascript" src="./define.js?_dc=20181209"></script>
+    <script language="javascript" src="./index.js?_dc=20181209"></script> 
+</body>
+</html>
+  
+
